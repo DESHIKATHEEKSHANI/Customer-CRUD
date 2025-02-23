@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Customer Management</h1>
+
+    <div class="form-container">
+        <h2>Add Customer</h2>
+        <input type="text" id="add-name" placeholder="Enter Name">
+        <input type="text" id="add-address" placeholder="Enter Address">
+        <input type="number" id="add-salary" placeholder="Enter Salary">
+        <button onclick="addCustomer()">Add Customer</button>
+    </div>
+
+    <div class="form-container">
+        <h2>Update Customer</h2>
+        <input type="number" id="update-id" placeholder="Enter ID">
+        <input type="text" id="update-name" placeholder="Enter Name">
+        <input type="text" id="update-address" placeholder="Enter Address">
+        <input type="number" id="update-salary" placeholder="Enter Salary">
+        <button onclick="updateCustomer()">Update Customer</button>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search by ID, Name, or Address">
+        <button onclick="searchCustomers()">Search</button>
+        <button onclick="loadCustomers()">Refresh</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbl-body"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
